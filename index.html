@@ -289,19 +289,8 @@
             });
         });
 
-        // Animated Background
+        // Animated Background - Removed particle generation
         const bgAnimation = document.getElementById('bgAnimation');
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.width = Math.random() * 5 + 2 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 20 + 's';
-            particle.style.animationDuration = Math.random() * 20 + 10 + 's';
-            bgAnimation.appendChild(particle);
-        }
 
         // Code Background
         const codeBg = document.getElementById('codeBg');
@@ -405,7 +394,7 @@
         });
 
         // Smooth Scroll Navigation
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link, .footer-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
